@@ -84,11 +84,12 @@ One of the book with the highest rating is the non-fiction book entitled 'Hamilt
 Given the selected columns, I supposed that the five top recommended books would be non-fiction about the American History and would may be written by Lin-Manuel Miranda.
 
 The five top recommended books were:
-1 The Mueller Report
-2 Alexander Hamilton
-3 The Amateur
-4 George Washington's Secret Six: The Spy Ring That Saved the American Revolution
-5 The Official SAT Study Guide
+
+1. The Mueller Report
+2. Alexander Hamilton
+3. The Amateur
+4. George Washington's Secret Six: The Spy Ring That Saved the American Revolution
+5. The Official SAT Study Guide
 
 Although each book has been written by a different writer the five recommended books are all non-fiction. They are about US History and American Presidency.
 
