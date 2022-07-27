@@ -11,9 +11,9 @@
 
 <!-- Add banner here -->
 
-This project aims to built a book recommendation engine with machine learning. This project has been mainly inspired by another project in this article https://randerson112358.medium.com/build-a-book-recommendation-system-using-python-machine-learning-ca6259d70319
+This project aims to built a book recommendation engine with machine learning. This project has been mainly inspired by another project in [this article]( https://randerson112358.medium.com/build-a-book-recommendation-system-using-python-machine-learning-ca6259d70319)
 
-The dataset has been taken from https://www.kaggle.com/datasets/sootersaalu/amazon-top-50-bestselling-books-2009-2019?resource=download.
+The dataset has been taken from [this kaggle](https://www.kaggle.com/datasets/sootersaalu/amazon-top-50-bestselling-books-2009-2019?resource=download)
 
 
 
@@ -26,9 +26,9 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 - [Table of contents](#table-of-contents)
 - [Dataset contents](#dataset-contents)
 - [Goal](#goal)
+- [Main steps](#main-steps)
 - [Demo Preview](#demo-preview)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Results](#results)
 - [Issues](#issues)
 
@@ -52,7 +52,7 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 The project aims to build a content based recommendation engine using Python and machine learning.
 In this project the content based recommendation engine ranked books according to the similarity of the recommended books and the highest rated book. In order to get this rank, we used a function called similarity scores.
 
-# Main steps
+## Main steps
 
 - I cleaned the dataset from duplicate rows. I wanted to get only unique rows in order to properly rank the books based on the "user rating" column.
 - I printed the book with the highest rating.
@@ -62,9 +62,8 @@ In this project the content based recommendation engine ranked books according t
 
 ## Demo Preview
 
-
-
-<img width="608" alt="Capture d’écran 2022-07-07 à 01 25 30" src="https://user-images.githubusercontent.com/82478538/177659473-de19db27-20fd-4817-b2c7-83d80902759d.png"> <img width="584" alt="Capture d’écran 2022-07-07 à 01 26 18" src="https://user-images.githubusercontent.com/82478538/177659520-30a6050b-3775-4772-ab42-bc445075322d.png"> <img width="563" alt="Capture d’écran 2022-07-07 à 01 26 58" src="https://user-images.githubusercontent.com/82478538/177659528-1a0533b2-c231-4d8a-a446-659adb8f05f9.png"> <img width="522" alt="Capture d’écran 2022-07-07 à 01 27 22" src="https://user-images.githubusercontent.com/82478538/177659532-b10aeb3d-d53f-4cc1-83c2-39199448feca.png">
+<img width="594" alt="Capture d’écran 2022-07-27 à 22 51 19" src="https://user-images.githubusercontent.com/82478538/181369989-6d6189c2-a38e-4615-981f-8f010e97fe84.png">
+<img width="594" alt="Capture d’écran 2022-07-27 à 22 51 37" src="https://user-images.githubusercontent.com/82478538/181370014-54dc62d3-4683-45e8-82a8-9eb142fcb4ac.png">
 
 
 ## Installation
@@ -72,20 +71,28 @@ In this project the content based recommendation engine ranked books according t
 Here are the command lines of the production environment.
 
 ```sh
-
+import pandas as pd
+import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import CountVectorizer
 ```
-
-
-## Usage
-
-
 
 
 ## Results
 
-Here are some results from the data analysis following the order of the questions.
+One of the book with the highest rating is the non-fiction book entitled 'Hamilton: The Revolution' written by Lin-Manuel Miranda. It is about the American history. 
+Given the selected columns, I supposed that the five top recommended books would be non-fiction about the American History and would may be written by Lin-Manuel Miranda.
 
+The five top recommended books were:
+1 The Mueller Report
+2 Alexander Hamilton
+3 The Amateur
+4 George Washington's Secret Six: The Spy Ring That Saved the American Revolution
+5 The Official SAT Study Guide
+
+Although each book has been written by a different writer the five recommended books are all non-fiction. They are about US History and American Presidency.
 
 
 ## Issues
 [(Back to top)](#table-of-contents)
+- must create a new column called 'book_id' to get numerical data and process the cosine similarity scores function.
